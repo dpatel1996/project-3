@@ -1,7 +1,7 @@
-
+var map;
   funtion disp() 
   {
-    m = new google.maps.Map(document.getElementById('m'), {
+    var map = new google.maps.Map(document.getElementById('m'), {
       center: {lat: 40.741895, lng: -73.989308},
       scrollwheel: true,
       zoom: 12
@@ -9,7 +9,7 @@
     
     var mark_skydeck= new google.maps.Marker({
       position: {lat: 41.878741, lng:-87.635943},
-      map:m,
+      map:map,
       title: 'Willis Tower Chicago',
       icon : 'images/skydeck_chi.jpg',
       animation: google.maps.Animation.BOUNCE,
@@ -20,7 +20,7 @@
       content: detail
     });
       mark_skydeck.addListener('click',funtion(){
-      skydeck.open(m,mark_skydeck)
+      skydeck.open(map,mark_skydeck)
       
       setTimeout(funtion() {
       skydeck.close();}, 12000);
