@@ -27,8 +27,9 @@ var map;
     });
 
     
-    
+  }  
     google.maps.event.addDomListener(window,'load',disp);
-  }
   
   /*lat: 21.705136, lng: 72.995875*/
+  
+ 

@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
   <title> My Project 1- Home</title>
-  <h2>Maps</h2>
+    <!--<link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
-    <script type="text/javascript" src="randomloc.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCAd7rBlBPtyT2RQnTawnSg28uADdnbY&callback=disp"
+    async defer></script>
+    <script src="randomloc.js"></script>
 </head>
 <body>
   <h1> My First Project </h1>
@@ -25,9 +28,7 @@
   <div id="wrapper">
     <h2> Random Location of Chicago Tourism </h2>
     <div id="canvas"></div>
-    <script src="randomloc.js"></script>
   </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCAd7rBlBPtyT2RQnTawnSg28uADdnbY&callback=disp"
-    async defer></script>
+  
 </body>
 </html>
