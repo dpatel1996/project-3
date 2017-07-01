@@ -2,7 +2,7 @@ var map;
   funtion disp() 
   {
     var map = new google.maps.Map(document.getElementById('m'), {
-      center: {lat: 40.741895, lng: -73.989308},
+      center: {lat: 41.875672, lng: -87.624347},
       scrollwheel: true,
       zoom: 12
     });
@@ -32,4 +32,8 @@ var map;
   }
   /*lat: 21.705136, lng: 72.995875*/
   
- 
+  /* Navy Pier lat: 41.891551 lng: -87.607375 
+  
+     Millenium Park: 41.882702 lng: -87.619394 */
+  
+  
