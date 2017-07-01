@@ -14,7 +14,7 @@ var map;
       icon : 'images/skydeck_chi.jpg',
       animation: google.maps.Animation.BOUNCE,
     })
-    var detail ="<h1> Willis Tower </h1> <p> skydeck is the tallest building of the chicago located in downtown and it is the one of the tourist attraction spot</p>';
+    var detail ='<h1> Willis Tower </h1> <p> skydeck is the tallest building of the chicago located in downtown and it is the one of the tourist attraction spot</p>';
     
     var skydeck = new google.maps.InfoWindow({
       content: detail
@@ -27,9 +27,9 @@ var map;
     });
 
     
-  }  
+   
     google.maps.event.addDomListener(window,'load',disp);
-  
+  }
   /*lat: 21.705136, lng: 72.995875*/
   
  
