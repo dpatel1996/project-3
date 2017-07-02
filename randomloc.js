@@ -1,5 +1,5 @@
 var map;
-  funtion disp() 
+  funtion initMap() 
   {
     var map = new google.maps.Map(document.getElementById('m'), {
       center: {lat: 41.875672, lng: -87.624347},
@@ -20,7 +20,7 @@ var map;
       content: detail
     });
       mark_skydeck.addListener('click',funtion(){
-      skydeck.open(map,mark_skydeck)
+      skydeck.open(map,mark_skydeck);
       
       setTimeout(funtion() {
       skydeck.close();}, 12000);
@@ -28,12 +28,11 @@ var map;
 
     
    
-    google.maps.event.addDomListener(window,'load',disp);
+    google.maps.event.addDomListener(window,'load',init);
   }
   /*lat: 21.705136, lng: 72.995875*/
   
   /* Navy Pier lat: 41.891551 lng: -87.607375 
   
      Millenium Park: 41.882702 lng: -87.619394 */
-  
-  
+     
