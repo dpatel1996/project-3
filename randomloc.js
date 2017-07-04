@@ -1,3 +1,43 @@
+function init(){
+	//alert('it works');
+	var el = document.getElementById('canvas');
+	var myLocation = new google.maps.LatLng(41.878741, -87.635943);
+	var mapOptions = {
+		center: myLocation,
+		zoom: 18,
+		mapTypeId: google.maps.MapTypeId.SATELLITE,
+		mapTypeControlOptions: {
+			position: google.maps.ControlPosition.BOTTOM_CENTER
+		}
+	};
+
+	var myMap = new google.maps.Map(el, mapOptions);
+
+	var marker = new google.maps.Marker({
+		position: myLocation,
+		map: myMap,
+		animation: google.maps.Animation.BOUNCE,
+	
+	});
+
+	var contentString = '<h1>Willis Tower</h1><img src="images/skydeck_chi.jpg"><p>This is the tallet building of chicago located in downtown. This is one of the major attraction of chicago. </p>';
+
+	var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  	});
+
+	google.maps.event.addListener(marker, 'mouseover', function() {
+    	infowindow.open(myMap, marker);
+  	});
+
+
+}
+
+google.maps.event.addDomListener(window, 'load', init);
+
+
+
+
 /*var map;
   funtion initMap() 
   {
@@ -35,26 +75,4 @@
   
      Millenium Park: 41.882702 lng: -87.619394 */
      
-function initMap(){
-  
-  var chicago = new google.maps.LatLng(41.875672,-87.624347);
-  
-  var skydeck = new google.maps.LatLng(41.878741, -87.635943);
-  
-  var navyPier = new google.maps.LatLng(41.891551, -87.607375);
-  
-  var MilleniumPark = new google.maps.LatLng(41.882702, -87.619394);
-  
-  var mapId= document.getElementById("map");
-  var mapCho = { center: chicago, zoom: 14};
-  var map: new.google.maps.Map(mapId,mapCho);
-  
-  var roadPath = new google.maps.Polygon({
-    direction: [skydeck, navyPier, MilleniumPark],
-    strokeColor: "#BEEC78",
-    strokeOpacity: 1.0,
-    strokeWeight: 3;
-  })
-  roadPath.setMap(map);
-}
 
